@@ -21,7 +21,7 @@ func partOne(input interface{}) string {
 	sum := 0
 
 	for i := 0; i < len(parsedInput.list1); i++ {
-		diff := utils.AbsInt(parsedInput.list1[i], parsedInput.list2[i])
+		diff := utils.AbsIntDiff(parsedInput.list1[i], parsedInput.list2[i])
 		sum += diff
 	}
 

@@ -17,11 +17,19 @@ const (
 	reset = "\033[0m"
 )
 
-func AbsInt(x, y int) int {
+func AbsIntDiff(x, y int) int {
 	if x < y {
 		return y - x
 	}
 	return x - y
+}
+
+func AbsInt(x int) int {
+	if x < 0 {
+		return x * -1
+	}
+
+	return x
 }
 
 func ReadInput() []string {
