@@ -54,9 +54,9 @@ func Run(input interface{}, problems []Problem) {
 	for idx, p := range problems {
 		start := time.Now()
 
-		duration := time.Since(start)
-
 		fmt.Printf("Result of part %d:%s %s %s\n", idx+1, green, p.Problem(input), reset)
+
+		duration := time.Since(start)
 
 		fmt.Printf("Execution time:%s %s %s\n", green, duration, reset)
 	}
