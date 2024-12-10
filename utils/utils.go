@@ -50,6 +50,15 @@ func ReadInput() []string {
 	return input
 }
 
+func ReadInputRaw() string {
+	file, err := os.ReadFile("./input.txt")
+	if err != nil {
+		log.Fatal("Cannot read input")
+	}
+
+	return string(file)
+}
+
 func Run(input interface{}, problems []Problem) {
 	for idx, p := range problems {
 		start := time.Now()
